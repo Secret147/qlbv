@@ -1,0 +1,107 @@
+.product_item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-right: 32px;
+    padding: 8px 0 8px 0;
+}
+.product_item:last-child {
+    border-bottom: none;
+}
+.img {
+    width: 15%;
+    img {
+        width: 48%;
+        height: 100%;
+    }
+}
+.icon-container {
+    display: inline-block; /* Đảm bảo biểu tượng được hiển thị theo chiều ngang */
+    animation: spin 2s linear infinite; /* Áp dụng hiệu ứng xoay */
+    font-size: 32px;
+    color: var(--primary);
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Góc xoay ban đầu */
+    }
+    100% {
+        transform: rotate(360deg); /* Góc xoay sau một vòng xoay đầy đủ (360 độ) */
+    }
+}
+.training_main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.icon_route_container {
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+        color: var(--primary);
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+.icon-container_success {
+    display: inline-block;
+    font-size: 48px;
+    color: var(--border);
+}
+.name {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+
+    p {
+        display: inline-block;
+        font-size: 2rem;
+        margin: 0;
+    }
+    .name_product {
+        margin-right: 6px;
+    }
+}
+.price {
+    display: flex;
+    align-items: center;
+
+    width: 20%;
+    font-weight: 700;
+    color: red;
+    p {
+        margin: 0;
+        font-size: 2.4rem;
+    }
+}
+.quantity {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    p {
+        margin: 0;
+    }
+}
+@media (max-width: 900px) {
+    .price {
+        p {
+            display: none;
+        }
+    }
+    .img {
+        width: 15%;
+        img {
+            width: 40px;
+            height: 60px;
+        }
+    }
+}
+@media (max-width: 550px) {
+    .name {
+        display: none;
+    }
+}
